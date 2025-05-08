@@ -11,13 +11,54 @@ This script provides an AI-powered transaction categorization system for Google 
 - Category management
 - Amount-based confidence adjustments
 
-## Setup
+## Setup Instructions
 
-1. Open your Google Sheet
-2. Go to Extensions > Apps Script
-3. Copy the contents of `transaction_categorizer.gs` into the script editor
-4. Save the script
-5. Refresh your Google Sheet
+### 1. Create a New Google Sheet
+1. Go to [Google Sheets](https://sheets.google.com)
+2. Create a new spreadsheet
+3. Rename the first sheet to "Transactions"
+
+### 2. Set Up the Required Columns
+In the "Transactions" sheet, add the following columns in order:
+- Date
+- Description
+- Amount
+- Category
+- Suggested Category
+- Confidence
+
+### 3. Add the Script
+1. In your Google Sheet, click on "Extensions" > "Apps Script"
+2. Delete any existing code in the script editor
+3. Copy the entire contents of `transaction_categorizer.gs` and paste it into the script editor
+4. Click "Save" (or press Ctrl+S)
+5. Give your project a name (e.g., "Transaction Categorizer")
+
+### 4. Authorize the Script
+1. Close the script editor and return to your spreadsheet
+2. Refresh the page
+3. You should see a new menu item called "Transaction Categorizer"
+4. Click on any menu item
+5. You'll be prompted to authorize the script - click "Review Permissions"
+6. Select your Google account
+7. Click "Advanced" > "Go to Transaction Categorizer (unsafe)"
+8. Click "Allow" to grant the necessary permissions
+
+### 5. Initial Setup
+1. Click on "Transaction Categorizer" > "Manage Categories" to view the default categories
+2. Add any additional categories you need
+3. Add some initial transactions with their correct categories
+4. Click "Transaction Categorizer" > "Update Training Data" to build your initial training dataset
+
+### 6. Start Using the Categorizer
+1. Add new transactions to your sheet
+2. Click "Transaction Categorizer" > "Categorize Transactions"
+3. The script will:
+   - Suggest categories for uncategorized transactions
+   - Show confidence scores
+   - Prompt you to choose between multiple high-confidence matches
+4. Review and correct any suggestions as needed
+5. Use "Update Training Data" periodically to improve the categorization accuracy
 
 ## Required Sheet Structure
 
